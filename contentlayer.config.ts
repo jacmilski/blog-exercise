@@ -26,7 +26,7 @@ export const Article = defineDocumentType(() => ({
         if (process.env.NODE_ENV === 'development') {
           return `http://localhost:3000/articles/${article._raw.flattenedPath}`
         } else {
-          return `https://contentlayer.io/articles/${article._raw.flattenedPath}`
+          return `https://blog-exercise-28d1.vercel.app/articles/${article._raw.flattenedPath}`
         }
       }
     },
