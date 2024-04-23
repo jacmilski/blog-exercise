@@ -2,8 +2,8 @@ import { Article, allArticles } from "@/.contentlayer/generated"
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { notFound } from "next/navigation";
 
-export const generateStaticParams = async () => {
-    return allArticles.map(article => ({
+export async function generateStaticParams() {
+    return allArticles.map((article: Article) => ({
         slug: article.slug
     }))
 }
@@ -16,7 +16,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
     return (
         <section>
-            <Mdx code={article.body.raw} />
+            <Mdx code={article.body.code} />
         </section>
     )
 }
