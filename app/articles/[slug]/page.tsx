@@ -16,7 +16,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
     return (
         <section>
-            <Mdx code={article.body.code} />
+            <Mdx code={article.body.raw} />
         </section>
     )
 }

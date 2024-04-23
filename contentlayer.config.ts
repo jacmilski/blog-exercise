@@ -15,11 +15,6 @@ export const Article = defineDocumentType(() => ({
         description: "The date the article was published",
         required: true,
     },
-/*     isReady: {
-      type: 'boolean',
-      description: "Whether article is ready to be published or not",
-      required: true,
-    } */
   },
   computedFields: {
     slug: {
